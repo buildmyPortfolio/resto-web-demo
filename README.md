@@ -1,4 +1,4 @@
-# Fino Deli – Restaurant Website
+# Restaurant Website
 
 A fancy, fully responsive restaurant website for **Fino Deli** — *The First Wine Bar & Delicatessen in Marikina*.
 
@@ -37,3 +37,4 @@ Hosted on GitHub Pages: `https://<your-username>.github.io/<repo-name>/`
 - **Address:** Near Marikina Sports Center, Marikina City, Philippines
 - **Phone:** 0929 966 6175
 - **Hours:** Tuesday – Sunday, 11:30 AM onwards
+

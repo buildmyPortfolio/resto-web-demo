@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found – Sample Restaurant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Lato:wght@300;400;700&family=Cormorant+Garamond:ital,wght@1,400;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    :root {
+      --clr-bg:      #120c04;
+      --clr-surface: #1a1109;
+      --clr-card:    #1f1509;
+      --clr-border:  rgba(201,168,76,.18);
+      --clr-gold:    #c9a84c;
+      --clr-gold-lt: #e8cb7a;
+      --clr-cream:   #f5edd8;
+      --clr-muted:   #9b8e79;
+      --clr-accent:  #6b1a10;
+      --ff-serif:    'Playfair Display', Georgia, serif;
+      --ff-sans:     'Lato', sans-serif;
+      --ff-italic:   'Cormorant Garamond', Georgia, serif;
+      --trans:       .25s ease;
+      --radius:      10px;
+    }
+    [data-theme="light"] {
+      --clr-bg:      #fdf9f2;
+      --clr-surface: #f5edd8;
+      --clr-card:    #fff8ec;
+      --clr-border:  rgba(139,94,26,.2);
+      --clr-cream:   #1a0e00;
+      --clr-muted:   #5c4a30;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--clr-bg);
+      color: var(--clr-cream);
+      font-family: var(--ff-sans);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    /* Decorative background glow */
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background: radial-gradient(ellipse 70% 60% at 50% 40%, rgba(107,26,16,.35) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    body::after {
+      content: '';
+      position: fixed; bottom: -30%; left: 50%; transform: translateX(-50%);
+      width: 90vw; height: 60vw;
+      background: radial-gradient(ellipse, rgba(201,168,76,.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .container {
+      position: relative; z-index: 1;
+      max-width: 580px;
+      animation: fadeUp .8s ease both;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(32px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .logo-wrap {
+      display: inline-block;
+      margin-bottom: 2rem;
+      animation: fadeUp .8s .1s ease both;
+    }
+    .logo-wrap img {
+      width: 90px; height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--clr-gold);
+      box-shadow: 0 8px 32px rgba(201,168,76,.25);
+    }
+    .error-code {
+      font-family: var(--ff-serif);
+      font-size: clamp(5rem, 18vw, 9rem);
+      font-weight: 700;
+      line-height: 1;
+      color: var(--clr-accent);
+      opacity: .35;
+      user-select: none;
+      animation: fadeUp .8s .15s ease both;
+    }
+    .eyebrow {
+      font-size: .78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .2em;
+      color: var(--clr-gold);
+      margin-bottom: .7rem;
+      animation: fadeUp .8s .2s ease both;
+    }
+    h1 {
+      font-family: var(--ff-serif);
+      font-size: clamp(1.6rem, 5vw, 2.5rem);
+      color: var(--clr-cream);
+      margin-bottom: 1rem;
+      animation: fadeUp .8s .25s ease both;
+    }
+    p {
+      color: var(--clr-muted);
+      line-height: 1.7;
+      font-size: .97rem;
+      margin-bottom: 2rem;
+      animation: fadeUp .8s .3s ease both;
+    }
+    p em {
+      font-family: var(--ff-italic);
+      color: var(--clr-gold);
+      font-size: 1.05em;
+    }
+    .divider {
+      width: 60px; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--clr-gold), transparent);
+      margin: 1.2rem auto;
+      animation: fadeUp .8s .35s ease both;
+    }
+    .btn-group {
+      display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+      animation: fadeUp .8s .4s ease both;
+    }
+    .btn {
+      display: inline-flex; align-items: center; gap: .5rem;
+      padding: .75rem 1.8rem;
+      border-radius: 50px;
+      font-size: .9rem; font-weight: 700;
+      letter-spacing: .05em; text-decoration: none;
+      transition: all var(--trans);
+    }
+    .btn-primary {
+      background: var(--clr-gold);
+      color: #1a0e00;
+      border: 2px solid var(--clr-gold);
+    }
+    .btn-primary:hover {
+      background: var(--clr-gold-lt);
+      border-color: var(--clr-gold-lt);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(201,168,76,.3);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--clr-cream);
+      border: 2px solid var(--clr-border);
+    }
+    .btn-outline:hover {
+      border-color: var(--clr-gold);
+      color: var(--clr-gold);
+      transform: translateY(-3px);
+    }
+    .footer-note {
+      margin-top: 3rem;
+      font-size: .78rem;
+      color: var(--clr-muted);
+      animation: fadeUp .8s .5s ease both;
+    }
+    .footer-note a { color: var(--clr-gold); text-decoration: none; }
+    .footer-note a:hover { text-decoration: underline; }
+
+    /* Theme toggle */
+    .theme-toggle {
+      position: fixed; top: 1.2rem; right: 1.2rem;
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--clr-card);
+      border: 1px solid var(--clr-border);
+      color: var(--clr-gold);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; cursor: pointer;
+      transition: all var(--trans);
+      z-index: 10;
+    }
+    .theme-toggle:hover { border-color: var(--clr-gold); }
+  </style>
+</head>
+<body>
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+    <i class="fa-solid fa-sun" id="theme-icon"></i>
+  </button>
+
+  <div class="container">
+    <a href="index.html" class="logo-wrap">
+      <img src="Logo.jpg" alt="Sample Restaurant" />
+    </a>
+
+    <div class="error-code">404</div>
+
+    <p class="eyebrow"><i class="fa-solid fa-utensils"></i>&nbsp; Oops — wrong table</p>
+
+    <h1>This Page Isn't on the Menu</h1>
+
+    <div class="divider"></div>
+
+    <p>
+      We couldn't find the page you were looking for.<br />
+      Perhaps you'd like to explore our&nbsp;<em>real</em>&nbsp;dishes instead?
+    </p>
+
+    <div class="btn-group">
+      <a href="index.html" class="btn btn-primary">
+        <i class="fa-solid fa-house"></i> Back to Home
+      </a>
+      <a href="index.html#menu" class="btn btn-outline">
+        <i class="fa-solid fa-book-open"></i> View Menu
+      </a>
+    </div>
+
+    <p class="footer-note">
+      © 2026 <a href="index.html">Sample Restaurant</a> · Fine Dining &amp; Bar
+    </p>
+  </div>
+
+  <script>
+    (function () {
+      const html    = document.documentElement;
+      const btn     = document.getElementById('theme-toggle');
+      const icon    = document.getElementById('theme-icon');
+      const stored  = localStorage.getItem('restaurant-theme');
+      const preferred = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      const current = stored || preferred;
+
+      html.setAttribute('data-theme', current);
+      icon.className = current === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+
+      btn.addEventListener('click', () => {
+        const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('restaurant-theme', next);
+        icon.className = next === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+      });
+    })();
+  </script>
+</body>
+</html>

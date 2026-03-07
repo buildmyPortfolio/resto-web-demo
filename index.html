@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sample Restaurant – Fine Dining & Bar</title>
+  <!-- SEO -->
+  <meta name="description" content="Sample Restaurant — A unique dining experience. Fine cuisine: tapas, pizza, pasta, paella, fine wines, imported cheeses and cold cuts." />
+  <meta name="keywords" content="restaurant, wine bar, delicatessen, tapas, pizza, pasta, paella, cocktails, Italian food, Spanish food" />
+  <meta name="author" content="Sample Restaurant" />
+  <link rel="canonical" href="#" />
+  <!-- Open Graph (Facebook, Messenger, Viber previews) -->
+  <meta property="og:type"        content="restaurant" />
+  <meta property="og:title"       content="Sample Restaurant – Fine Dining & Bar" />
+  <meta property="og:description" content="A unique dining experience. Rustic Italian & Spanish flare — Tapas, Pizza, Pasta, Paella, Fine Wines & Cocktails." />
+  <meta property="og:image"       content="Logo.jpg" />
+  <meta property="og:url"         content="#" />
+  <meta property="og:site_name"   content="Sample Restaurant" />
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Sample Restaurant – Fine Dining & Bar" />
+  <meta name="twitter:description" content="A unique dining experience. Rustic Italian & Spanish flare." />
+  <meta name="twitter:image"       content="Logo.jpg" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════ SPECIALS BANNER ═══════════════════ -->
+  <div class="specials-bar" id="specials-bar">
+    <div class="specials-bar-inner">
+      <i class="fa-solid fa-star"></i>
+      <span><strong>Weekend Special:</strong> Enjoy our Steak Paella + 2 Cocktails for only <strong>₱1,900</strong> — Fri &amp; Sat, dine-in only.</span>
+      <a href="#reservations" class="specials-bar-cta">Reserve Now</a>
+    </div>
+    <button class="specials-bar-close" id="specials-bar-close" aria-label="Dismiss">&times;</button>
+  </div>
+
+  <!-- ═══════════════════ NAVIGATION ═══════════════════ -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <img src="Logo.jpg" alt="Sample Restaurant Logo" class="nav-logo-img" />
+        <span>Sample Restaurant</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#reservations" class="nav-cta">Reserve a Table</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Switch to light mode">
+          <i class="fa-solid fa-sun" id="theme-icon"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════ HERO ═══════════════════ -->
+  <section id="home" class="hero">
+    <!-- Slideshow backgrounds -->
+    <div class="hero-slides">
+      <div class="hero-slide" style="background-image:url('Menu/Salmon.jpg')"></div>
+      <div class="hero-slide" style="background-image:url('Menu/Ribs.jpg')"></div>
+      <div class="hero-slide" style="background-image:url('Menu/Tenderloim.jpg')"></div>
+      <div class="hero-slide" style="background-image:url('Menu/Salpicao.jpg')"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-tagline">Fine Dining &amp; Wine Bar</p>
+      <h1 class="hero-title">Sample <em>Restaurant</em></h1>
+      <p class="hero-subtitle">Rustic Italian &amp; Spanish Flare in the Heart of the City</p>
+      <a href="#reviews" class="hero-rating" aria-label="4.7 stars – See our Reviews">
+        <span class="stars">★★★★★</span>
+        <span class="rating-score">4.7</span>
+        <span class="rating-label">on Google Reviews <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:.65em;opacity:.7"></i></span>
+      </a>
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-primary">Explore Menu</a>
+        <a href="#contact" class="btn btn-outline">Find Us</a>
+      </div>
+    </div>
+    <a href="#about" class="hero-scroll" aria-label="Scroll down">
+      <i class="fa-solid fa-chevron-down"></i>
+    </a>
+  </section>
+
+  <!-- ═══════════════════ RIBBON ═══════════════════ -->
+  <div class="ribbon">
+    <div class="ribbon-inner">
+      <span><i class="fa-solid fa-wine-glass"></i> Fine Wines &amp; Cocktails</span>
+      <span class="ribbon-dot">✦</span>
+      <span><i class="fa-solid fa-utensils"></i> Starters · Pasta · Grills</span>
+      <span class="ribbon-dot">✦</span>
+      <span><i class="fa-solid fa-star"></i> Outdoor Seating &amp; Private Dining</span>
+      <span class="ribbon-dot">✦</span>
+      <span><i class="fa-solid fa-cake-candles"></i> Desserts &amp; Specialty Coffee</span>
+      <span class="ribbon-dot">✦</span>
+      <span><i class="fa-solid fa-wine-glass"></i> Fine Wines &amp; Cocktails</span>
+      <span class="ribbon-dot">✦</span>
+      <span><i class="fa-solid fa-utensils"></i> Starters · Pasta · Grills</span>
+      <span class="ribbon-dot">✦</span>
+      <span><i class="fa-solid fa-star"></i> Outdoor Seating &amp; Private Dining</span>
+      <span class="ribbon-dot">✦</span>
+      <span><i class="fa-solid fa-cake-candles"></i> Desserts &amp; Specialty Coffee</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ STATS ═══════════════════ -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item" data-target="4.7" data-decimals="1">
+          <div class="stat-icon"><i class="fa-solid fa-star"></i></div>
+          <span class="stat-number" data-suffix="">4.7</span>
+          <span class="stat-label">Google Rating</span>
+        </div>
+        <div class="stat-item" data-target="3" data-decimals="0">
+          <div class="stat-icon"><i class="fa-solid fa-calendar-days"></i></div>
+          <span class="stat-number" data-suffix="+">0</span>
+          <span class="stat-label">Years Open</span>
+        </div>
+        <div class="stat-item" data-target="65" data-decimals="0">
+          <div class="stat-icon"><i class="fa-solid fa-utensils"></i></div>
+          <span class="stat-number" data-suffix="+">0</span>
+          <span class="stat-label">Menu Items</span>
+        </div>
+        <div class="stat-item" data-target="31" data-decimals="0">
+          <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+          <span class="stat-number" data-suffix="+">0</span>
+          <span class="stat-label">Google Reviews</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ ABOUT ═══════════════════ -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-wrap">
+          <img src="Menu/Ribs.jpg" alt="Sample Restaurant Signature Dish" class="about-img" />
+          <div class="about-badge">
+            <span class="badge-number">★ 4.7</span>
+            <span class="badge-label">Google Rating</span>
+          </div>
+        </div>
+        <div class="about-text">
+          <p class="section-eyebrow">Our Story</p>
+          <h2 class="section-title">Where Every Bite<br /><em>Tells a Story</em></h2>
+          <p class="about-lead">"A Dining Experience Like No Other."</p>
+          <p>Sample Restaurant brings rustic Italian and Spanish flare — Tapas, Pizza, Pasta and more — in an inviting and relaxed atmosphere. We serve a wide variety of imported wines, cheeses, and cold cuts.</p>
+          <p>Sample Restaurant is about attention to quality and a satisfying dining experience. Our goal is to give our community a chance to enjoy something truly unique.</p>
+          <div class="about-pills">
+            <span class="pill"><i class="fa-solid fa-martini-glass"></i> Great Cocktails</span>
+            <span class="pill"><i class="fa-solid fa-chair"></i> Outdoor Seating</span>
+            <span class="pill"><i class="fa-solid fa-door-closed"></i> Private Dining Room</span>
+          </div>
+          <div class="about-price-tag">
+            <i class="fa-solid fa-peso-sign"></i>
+            <span>₱500 – ₱1,000 per person</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ MENU ═══════════════════ -->
+  <section id="menu" class="menu-section">
+    <div class="container">
+      <p class="section-eyebrow">What We Serve</p>
+      <h2 class="section-title">Our <em>Menu</em></h2>
+      <p class="section-subtitle">From starters to grills, every dish crafted with care and passion.</p>
+
+      <!-- Category Tabs -->
+      <div class="menu-tabs" role="tablist">
+        <button class="menu-tab active" data-target="starters" role="tab">Starters</button>
+        <button class="menu-tab" data-target="soups" role="tab">Soups</button>
+        <button class="menu-tab" data-target="salads" role="tab">Salads</button>
+        <button class="menu-tab" data-target="pasta" role="tab">Pasta</button>
+        <button class="menu-tab" data-target="mains" role="tab">Mains</button>
+        <button class="menu-tab" data-target="desserts" role="tab">Desserts</button>
+        <button class="menu-tab" data-target="coffee" role="tab">Coffee</button>
+        <button class="menu-tab" data-target="drinks" role="tab">Drinks</button>
+      </div>
+
+      <!-- ── Starters ── -->
+      <div class="menu-panel active" id="starters" role="tabpanel">
+        <div class="menu-grid">
+          <div class="menu-card featured">
+            <img src="Menu/Nachos.jpg" alt="Nachos" />
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3>Nachos</h3>
+                <span class="price">₱285</span>
+              </div>
+              <p class="menu-card-desc">Crispy tortilla chips piled with melted cheese, fresh tomato salsa and jalapeños</p>
+            </div>
+          </div>
+          <div class="menu-card featured">
+            <img src="Menu/Spring Rolls.jpg" alt="Spring Rolls" />
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3>Spring Rolls</h3>
+                <span class="price">₱295</span>
+              </div>
+              <p class="menu-card-desc">Crispy golden rolls stuffed with seasoned vegetables, served with sweet chili dipping sauce</p>
+            </div>
+          </div>
+          <div class="menu-card featured">
+            <img src="Menu/Salpicao.jpg" alt="Beef Salpicao" />
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3>Beef Salpicao</h3>
+                <span class="price">₱475</span>
+              </div>
+              <p class="menu-card-desc">Tender pan-seared beef cubes tossed in garlic olive oil with buttery button mushrooms</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Soups ── -->
+      <div class="menu-panel" id="soups" role="tabpanel">
+        <div class="menu-grid">
+          <div class="menu-card featured">
+            <img src="Menu/Onion Soup.jpg" alt="French Onion Soup" />
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3>French Onion Soup</h3>
+                <span class="price">₱310</span>
+              </div>
+              <p class="menu-card-desc">Slow-caramelized onion broth topped with a toasted crouton and bubbling melted Gruyère</p>
+            </div>
+          </div>
+          <div class="menu-card featured">
+            <img src="Menu/Mushroom Soup.jpg" alt="Truffle Mushroom Soup" />
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3>Truffle Mushroom</h3>
+                <span class="price">₱235</span>
+              </div>
+              <p class="menu-card-desc">Rich and velvety cream of mushroom soup, elevated with a finishing drizzle of truffle oil</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Salads ── -->
+      <div class="menu-panel" id="salads" role="tabpanel">
+        <div class="menu-grid">
+          <div class="menu-card featured">
+            <img src="Menu/Caesar Salad.jpg" alt="Caesar Salad" />
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3>Caesar Salad</h3>
+                <span class="price">₱275</span>
+              </div>
+              <p class="menu-card-desc">Crisp romaine, golden croutons and shaved parmesan tossed in classic Caesar dressing</p>
+            </div>
+          </div>
+          <div class="menu-card featured">
+            <img src="Menu/Kani Salad.jpg" alt="Kani Salad" />
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3>Kani Salad</h3>
+                <span class="price">₱345</span>
+              </div>
+              <p class="menu-card-desc">Japanese-style crab stick salad with cucumber, ripe mango strips and Japanese mayo</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Pasta ── -->
+      <div class="menu-panel" id="pasta" role="tabpanel">
+        <div class="menu-grid">
+          <div class="menu-card featured">
+            <img src="Menu/Aglio Olio.jpg" alt="Seafood Aglio Olio" />
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3>Seafood Aglio Olio</h3>
+                <span class="price">₱420</span>
+              </div>
+              <p class="menu-card-desc">Linguine tossed in fragrant garlic-infused olive oil with shrimp, mussels and calamari</p>
+            </div>
+          </div>
+          <div class="menu-card featured">
+            <img src="Menu/Carbonara.jpg" alt="Carbonara Soufflé" />
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3>Carbonara Soufflé</h3>
+                <span class="price">₱420</span>
+              </div>
+              <p class="menu-card-desc">Silky egg and parmesan cream sauce with crispy pancetta over al dente pasta</p>
+            </div>
+          </div>
+          <div class="menu-card featured">
+            <img src="Menu/Lasagna.jpg" alt="Lasagna" />
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3>Lasagna</h3>
+                <span class="price">₱380</span>
+              </div>
+              <p class="menu-card-desc">Classic Italian baked pasta layered with rich meat bolognese and creamy béchamel sauce</p>
+            </div>
+          </div>
+          <div class="menu-card featured">
+            <img src="Menu/Pesto Pasta.jpg" alt="Pesto Chicken" />
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3>Pesto Chicken</h3>
+                <span class="price">₱375</span>
+              </div>
+              <p class="menu-card-desc">Tender chicken and pasta generously tossed in house-made basil pesto with shaved parmesan</p>
+            </div>
+          </div>
+          <div class="menu-card featured">
+            <img src="Menu/Scampi Pasta.jpg" alt="Scampi Pasta" />
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3>Scampi Pasta</h3>
+                <span class="price">₱430</span>
+              </div>
+              <p class="menu-card-desc">Linguine tossed with plump prawns in a rich garlic white wine and butter sauce</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Mains ── -->
+      <div class="menu-panel" id="mains" role="tabpanel">
+        <div class="menu-grid">
+          <div class="menu-card featured">
+            <img src="Menu/Fish Fillet.jpg" alt="Fish Fillet" />
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3>Fish Fillet</h3>
+                <span class="price">₱590</span>
+              </div>
+              <p class="menu-card-desc">Pan-seared fillet with a golden crust, finished in lemon butter caper sauce with seasonal sides</p>
+            </div>
+          </div>
+          <div class="menu-card featured">
+            <img src="Menu/Ribs.jpg" alt="Fino Ribs" />
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3>Fino Ribs</h3>
+                <span class="price">₱715</span>
+              </div>
+              <p class="menu-card-desc">Slow-cooked pork ribs until fall-off-the-bone tender, glazed in our signature smoky house sauce</p>
+            </div>
+          </div>
+          <div class="menu-card featured">
+            <img src="Menu/Salmon.jpg" alt="Creamy Parmesan Salmon" />
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3>Creamy Parmesan Salmon</h3>
+                <span class="price">₱785</span>
+              </div>
+              <p class="menu-card-desc">Norwegian salmon with a golden parmesan herb crust over creamy tomato risotto with balsamic reduction</p>
+            </div>
+          </div>
+          <div class="menu-card featured">
+            <img src="Menu/Tenderloim.jpg" alt="Filet Mignon" />
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3>Filet Mignon</h3>
+                <span class="price">₱899</span>
+              </div>
+              <p class="menu-card-desc">Prime beef tenderloin, seared to your liking. Choose 1 sauce: peppercorn, truffle mushroom, or chimichurri</p>
+            </div>
+          </div>
+          <div class="menu-card premium-item">
+            <img src="Menu/Ribeye Steak.jpg" alt="Ribeye Steak" />
+            <div class="menu-card-body">
+              <div class="premium-badge">Premium Cut</div>
+              <div class="menu-card-header">
+                <h3>Ribeye Steak</h3>
+                <span class="price">₱2,120</span>
+              </div>
+              <p class="menu-card-desc">USDA Angus ribeye, 21 days dry-aged for deep marbling and exceptional flavor, grilled to perfection</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Desserts ── -->
+      <div class="menu-panel" id="desserts" role="tabpanel">
+        <div class="menu-grid">
+          <div class="menu-card featured">
+            <img src="Menu/Strawberry Cheesecake.jpg" alt="Strawberry Cheesecake" />
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3>Strawberry Cheesecake</h3>
+                <span class="price">₱289</span>
+              </div>
+              <p class="menu-card-desc">Velvety New York-style cheesecake on a buttery biscuit base, topped with fresh strawberry glaze</p>
+            </div>
+          </div>
+          <div class="menu-card featured">
+            <img src="Menu/Blueberry Cheesecake.jpg" alt="Blueberry Cheesecake" />
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3>Blueberry Cheesecake</h3>
+                <span class="price">₱289</span>
+              </div>
+              <p class="menu-card-desc">Creamy classic cheesecake with a rich blueberry compote over a golden graham cracker crust</p>
+            </div>
+          </div>
+          <div class="menu-card featured">
+            <img src="Menu/Chocolate Cake.jpg" alt="Chocolate Cake" />
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3>Chocolate Cake</h3>
+                <span class="price">₱265</span>
+              </div>
+              <p class="menu-card-desc">Decadent layers of moist dark chocolate sponge with silky ganache and rich chocolate frosting</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Coffee ── -->
+      <div class="menu-panel" id="coffee" role="tabpanel">
+        <div class="menu-grid">
+          <div class="menu-card featured">
+            <img src="Menu/Black Coffee.jpg" alt="Black Coffee" />
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3>Black Coffee</h3>
+                <span class="price">₱99</span>
+              </div>
+              <p class="menu-card-desc">Rich and bold espresso-based black coffee, brewed fresh to order — pure and unfussy</p>
+            </div>
+          </div>
+          <div class="menu-card featured">
+            <img src="Menu/Latte.jpg" alt="Caffè Latte" />
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3>Caffè Latte</h3>
+                <span class="price">₱130</span>
+              </div>
+              <p class="menu-card-desc">Smooth double espresso with perfectly steamed velvety milk, topped with light microfoam</p>
+            </div>
+          </div>
+          <div class="menu-card featured">
+            <img src="Menu/Machiatto.jpg" alt="Macchiato" />
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3>Caffè Macchiato</h3>
+                <span class="price">₱110</span>
+              </div>
+              <p class="menu-card-desc">Bold espresso "stained" with a delicate dollop of rich frothed milk for a subtle creamy finish</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Drinks ── -->
+      <div class="menu-panel" id="drinks" role="tabpanel">
+        <div class="menu-grid">
+          <div class="menu-card featured">
+            <img src="Menu/Margarita.jpg" alt="Margarita Cocktail" />
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3>Margarita</h3>
+                <span class="price">₱335</span>
+              </div>
+              <p class="menu-card-desc">Classic tequila blanco shaken with fresh lime juice and triple sec, served with a salted rim</p>
+            </div>
+          </div>
+          <div class="menu-card featured">
+            <img src="Menu/Mango Smoothie.jpg" alt="Mango Smoothie" />
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3>Mango Smoothie</h3>
+                <span class="price">₱175</span>
+              </div>
+              <p class="menu-card-desc">Chilled blend of ripe Philippine mangoes — naturally sweet, creamy and refreshing</p>
+            </div>
+          </div>
+          <div class="menu-card featured">
+            <img src="Menu/Strawberry Smoothie.jpg" alt="Strawberry Smoothie" />
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3>Strawberry Smoothie</h3>
+                <span class="price">₱175</span>
+              </div>
+              <p class="menu-card-desc">Fresh strawberries blended with a touch of honey and cream for a fruity, velvety sip</p>
+            </div>
+          </div>
+          <div class="menu-card featured">
+            <img src="Menu/Wine.jpg" alt="House Wine" />
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3>House Wine</h3>
+                <span class="price">₱295</span>
+              </div>
+              <p class="menu-card-desc">Carefully curated house red or white — ask your server for the current pour and bottle selection</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Menu Images Link -->
+      <div class="menu-images-cta">
+        <p>Want to see the full printed menu?</p>
+        <div class="menu-images-thumbs">
+          <a href="Menu List/Menulist0.jpg" target="_blank"><img src="Menu List/Menulist0.jpg" alt="Menu Page 1" /></a>
+          <a href="Menu List/Menulist1.jpg" target="_blank"><img src="Menu List/Menulist1.jpg" alt="Menu Page 2" /></a>
+          <a href="Menu List/Menulist2.jpg" target="_blank"><img src="Menu List/Menulist2.jpg" alt="Menu Page 3" /></a>
+          <a href="Menu List/Menulist3.jpg" target="_blank"><img src="Menu List/Menulist3.jpg" alt="Menu Page 4" /></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ REVIEWS ═══════════════════ -->
+  <section id="reviews" class="reviews-section">
+    <div class="container">
+      <p class="section-eyebrow">What Guests Say</p>
+      <h2 class="section-title">Guest <em>Reviews</em></h2>
+      <div class="reviews-meta">
+        <div class="reviews-rating-big">
+          <span class="reviews-score">4.7</span>
+          <div class="reviews-stars-wrap">
+            <span class="reviews-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <span class="reviews-count">Based on 31+ Google Reviews</span>
+          </div>
+        </div>
+        <a href="#" class="btn btn-outline reviews-btn">
+          <i class="fa-brands fa-google"></i> See All Reviews
+        </a>
+      </div>
+      <div class="reviews-track-wrap">
+        <button class="reviews-nav-btn" id="reviews-prev" aria-label="Previous review"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="reviews-track" id="reviews-track">
+          <div class="review-card">
+            <div class="review-header">
+              <div class="review-avatar">JC</div>
+              <div>
+                <div class="review-author">Joan C.</div>
+                <div class="review-date">February 2026</div>
+              </div>
+              <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            </div>
+            <p class="review-text">“Amazing place! The Paella Valenciana was absolutely delicious, and the cocktails were top-notch. Such a hidden gem. Will definitely come back with the whole family.”</p>
+            <a href="#" class="review-source"><i class="fa-brands fa-google"></i> Review</a>
+          </div>
+          <div class="review-card">
+            <div class="review-header">
+              <div class="review-avatar">MR</div>
+              <div>
+                <div class="review-author">Miguel R.</div>
+                <div class="review-date">January 2026</div>
+              </div>
+              <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            </div>
+            <p class="review-text">“The cheese platter and wine selection here is truly exceptional. The vibe is cozy and the staff are very accommodating. The Ribeye Steak was cooked perfectly. Highly recommend!”</p>
+            <a href="#" class="review-source"><i class="fa-brands fa-google"></i> Review</a>
+          </div>
+          <div class="review-card">
+            <div class="review-header">
+              <div class="review-avatar">AL</div>
+              <div>
+                <div class="review-author">Angela L.</div>
+                <div class="review-date">January 2026</div>
+              </div>
+              <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            </div>
+            <p class="review-text">“Perfect for date nights! The private dining room is elegant and the food is outstanding. We had the Mozzarella Tower and Fino Ribs — both were incredible. The Negroni cocktail was a great touch.”</p>
+            <a href="#" class="review-source"><i class="fa-brands fa-google"></i> Review</a>
+          </div>
+          <div class="review-card">
+            <div class="review-header">
+              <div class="review-avatar">KD</div>
+              <div>
+                <div class="review-author">Karl D.</div>
+                <div class="review-date">December 2025</div>
+              </div>
+              <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            </div>
+            <p class="review-text">“Finally a true wine bar! The Grand Deli &amp; Cheese Platter is a must-order. Great imported selection, relaxed outdoor seating, and the staff genuinely know their wines. A++”</p>
+            <a href="#" class="review-source"><i class="fa-brands fa-google"></i> Review</a>
+          </div>
+          <div class="review-card">
+            <div class="review-header">
+              <div class="review-avatar">SB</div>
+              <div>
+                <div class="review-author">Sofia B.</div>
+                <div class="review-date">November 2025</div>
+              </div>
+              <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            </div>
+            <p class="review-text">“Such a unique experience! We tried the Seafood Aglio Olio and the Blueberry Lemon Sangria — both fantastic. Cozy atmosphere, great food, very Instagrammable. Will definitely return!”</p>
+            <a href="#" class="review-source"><i class="fa-brands fa-google"></i> Review</a>
+          </div>
+        </div>
+        <button class="reviews-nav-btn" id="reviews-next" aria-label="Next review"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+      <div class="reviews-dots" id="reviews-dots"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ GALLERY ═══════════════════ -->
+  <section id="gallery" class="gallery-section">
+    <div class="container">
+      <p class="section-eyebrow">From Our Kitchen</p>
+      <h2 class="section-title">A Feast for <em>the Eyes</em></h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item" style="--i:1">
+        <img src="Menu/Lasagna.jpg" alt="Lasagna" loading="lazy" />
+        <div class="gallery-caption">Lasagna</div>
+      </div>
+      <div class="gallery-item" style="--i:2">
+        <img src="Menu/Scampi Pasta.jpg" alt="Scampi Pasta" loading="lazy" />
+        <div class="gallery-caption">Scampi Pasta</div>
+      </div>
+      <div class="gallery-item" style="--i:3">
+        <img src="Menu/Fish Fillet.jpg" alt="Fish Fillet" loading="lazy" />
+        <div class="gallery-caption">Fish Fillet</div>
+      </div>
+      <div class="gallery-item" style="--i:4">
+        <img src="Menu/Ribs.jpg" alt="Fino Ribs" loading="lazy" />
+        <div class="gallery-caption">Fino Ribs</div>
+      </div>
+      <div class="gallery-item" style="--i:5">
+        <img src="Menu/Pesto Pasta.jpg" alt="Pesto Pasta" loading="lazy" />
+        <div class="gallery-caption">Pesto Chicken</div>
+      </div>
+      <div class="gallery-item" style="--i:6">
+        <img src="Menu/Onion Soup.jpg" alt="French Onion Soup" loading="lazy" />
+        <div class="gallery-caption">French Onion Soup</div>
+      </div>
+      <div class="gallery-item" style="--i:7">
+        <img src="Menu/Spring Rolls.jpg" alt="Spring Rolls" loading="lazy" />
+        <div class="gallery-caption">Spring Rolls</div>
+      </div>
+      <div class="gallery-item" style="--i:8">
+        <img src="Menu/Aglio Olio.jpg" alt="Seafood Aglio Olio" loading="lazy" />
+        <div class="gallery-caption">Seafood Aglio Olio</div>
+      </div>
+      <div class="gallery-item" style="--i:9">
+        <img src="Menu/Salpicao.jpg" alt="Beef Salpicao" loading="lazy" />
+        <div class="gallery-caption">Beef Salpicao</div>
+      </div>
+      <div class="gallery-item" style="--i:10">
+        <img src="Menu/Ribeye Steak.jpg" alt="Ribeye Steak" loading="lazy" />
+        <div class="gallery-caption">Ribeye Steak</div>
+      </div>
+      <div class="gallery-item" style="--i:11">
+        <img src="Menu/Caesar Salad.jpg" alt="Caesar Salad" loading="lazy" />
+        <div class="gallery-caption">Caesar Salad</div>
+      </div>
+      <div class="gallery-item" style="--i:12">
+        <img src="Menu/Carbonara.jpg" alt="Carbonara Souffle" loading="lazy" />
+        <div class="gallery-caption">Carbonara Soufflé</div>
+      </div>
+      <div class="gallery-item" style="--i:13">
+        <img src="Menu/Salmon.jpg" alt="Salmon" loading="lazy" />
+        <div class="gallery-caption">Grilled Salmon</div>
+      </div>
+      <div class="gallery-item" style="--i:14">
+        <img src="Menu/Nachos.jpg" alt="Nachos" loading="lazy" />
+        <div class="gallery-caption">Nachos</div>
+      </div>
+    </div>
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox-close" id="lightbox-close">&times;</button>
+      <button class="lightbox-prev" id="lightbox-prev">&#8249;</button>
+      <img src="" alt="" id="lightbox-img" />
+      <p class="lightbox-caption" id="lightbox-caption"></p>
+      <button class="lightbox-next" id="lightbox-next">&#8250;</button>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ INSTAGRAM ═══════════════════ -->
+  <section class="instagram-section">
+    <div class="container">
+      <p class="section-eyebrow">@samplerestaurant</p>
+      <h2 class="section-title">Follow Us on <em>Instagram</em></h2>
+      <p class="section-subtitle" style="text-align:center;margin:0 auto 2.5rem;">Tag us in your food photos for a chance to be featured!</p>
+      <div class="insta-grid">
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="insta-item"><img src="Menu/Ribeye Steak.jpg" alt="Ribeye Steak" loading="lazy" /><div class="insta-overlay"><i class="fa-brands fa-instagram"></i></div></a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="insta-item"><img src="Menu/Ribeye Steak.jpg" alt="Ribeye Steak" loading="lazy" /><div class="insta-overlay"><i class="fa-brands fa-instagram"></i></div></a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="insta-item"><img src="Menu/Kani Salad.jpg" alt="Kani Salad" loading="lazy" /><div class="insta-overlay"><i class="fa-brands fa-instagram"></i></div></a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="insta-item"><img src="Menu/Salpicao.jpg" alt="Salpicao" loading="lazy" /><div class="insta-overlay"><i class="fa-brands fa-instagram"></i></div></a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="insta-item"><img src="Menu/Ribs.jpg" alt="Fino Ribs" loading="lazy" /><div class="insta-overlay"><i class="fa-brands fa-instagram"></i></div></a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="insta-item"><img src="Menu/Salmon.jpg" alt="Salmon" loading="lazy" /><div class="insta-overlay"><i class="fa-brands fa-instagram"></i></div></a>
+      </div>
+      <div style="text-align:center;margin-top:2rem;">
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="btn btn-outline"><i class="fa-brands fa-instagram"></i> Follow on Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ CONTACT ═══════════════════ -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <p class="section-eyebrow">Visit Us</p>
+      <h2 class="section-title">Find <em>Us</em></h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="info-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <h4>Address</h4>
+              <p>Near Marikina Sports Center<br />Marikina City, Philippines</p>
+              <a href="https://www.google.com/maps/place/Marikina+Sports+Center/@14.6345177,121.0958033,17z/data=!3m1!4b1!4m6!3m5!1s0x3397b834cc20457d:0xc7e4d6b507e1446b!8m2!3d14.6345177!4d121.0983782!16s%2Fm%2F0wf1_mw?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="info-link">Get Directions <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <div class="info-card">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <h4>Phone / Email</h4>
+              <p><a href="tel:+639299666175">0929 966 6175</a></p>
+              <p><a href="mailto:jaypeeah@gmail.com">jaypeeah@gmail.com</a></p>
+            </div>
+          </div>
+          <div class="info-card">
+            <i class="fa-solid fa-clock"></i>
+            <div>
+              <h4>Hours</h4>
+              <table class="hours-table">
+                <tr><td>Monday</td><td>Closed</td></tr>
+                <tr><td>Tuesday – Sunday</td><td>11:30 AM onwards</td></tr>
+              </table>
+            </div>
+          </div>
+          <div class="info-card">
+            <i class="fa-solid fa-share-nodes"></i>
+            <div>
+              <h4>Follow Us</h4>
+              <div class="social-links">
+                <a href="https://www.instagram.com/" target="_blank" class="social-btn instagram"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                <a href="#reviews" class="social-btn google"><i class="fa-brands fa-google"></i> Reviews</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-map">
+          <iframe
+            title="Sample Restaurant Location"
+            src="https://maps.google.com/maps?q=14.6345177,121.0983782&z=17&output=embed"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ RESERVATIONS ═══════════════════ -->
+  <section id="reservations" class="reservations-section">
+    <div class="container">
+      <div class="res-inner">
+        <div class="res-text">
+          <p class="section-eyebrow light">Reserve Your Table</p>
+          <h2 class="section-title light">Ready for a<br /><em>Memorable Experience?</em></h2>
+          <p>Fill in your details and we’ll confirm your reservation. For private dining, call us directly.</p>
+          <div style="display:flex;gap:.8rem;flex-wrap:wrap;">
+            <button class="btn btn-primary btn-lg" id="open-reservation-form">
+              <i class="fa-solid fa-calendar-check"></i> Book a Table
+            </button>
+            <a href="tel:+639299666175" class="btn btn-outline btn-lg">
+              <i class="fa-solid fa-phone"></i> Call Us
+            </a>
+          </div>
+        </div>
+        <div class="res-image">
+          <img src="Menu/Salmon.jpg" alt="Reserve a table at Sample Restaurant" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="Logo.jpg" alt="Sample Restaurant" class="footer-logo" />
+          <h3>Sample Restaurant</h3>
+          <p>Fine Dining &amp; Wine Bar. Rustic Italian &amp; Spanish flare in an inviting atmosphere.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p><i class="fa-solid fa-location-dot"></i> Near Marikina Sports Center, Marikina City, Philippines</p>
+          <p><i class="fa-solid fa-phone"></i> <a href="tel:+639299666175">0929 966 6175</a></p>
+          <p><i class="fa-solid fa-envelope"></i> <a href="mailto:jaypeeah@gmail.com">jaypeeah@gmail.com</a></p>
+          <p><i class="fa-solid fa-clock"></i> Tue–Sun: 11:30 AM onwards</p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#reviews" aria-label="Reviews"><i class="fa-brands fa-google"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sample Restaurant. All rights reserved.</p>
+        <p class="footer-price">Price per person: ₱500 – ₱1,000 · <a href="#reviews" class="footer-rating-link"><span class="stars-small">★ 4.7</span> Reviews</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════ RESERVATION FORM MODAL ═══════════════════ -->
+  <div id="res-modal" class="res-modal" role="dialog" aria-modal="true" aria-labelledby="res-modal-title">
+    <div class="res-modal-backdrop" id="res-modal-backdrop"></div>
+    <div class="res-modal-panel">
+      <button class="res-modal-close" id="res-modal-close" aria-label="Close form"><i class="fa-solid fa-xmark"></i></button>
+      <div class="res-modal-header">
+        <img src="Logo.jpg" alt="Sample Restaurant" class="res-modal-logo" />
+        <h2 id="res-modal-title">Reserve Your Table</h2>
+        <p>We’ll confirm your booking via phone. Open Tue–Sun from 11:30 AM.</p>
+      </div>
+      <form class="res-form" id="res-form" action="#" onsubmit="handleReservation(event)">
+        <div class="res-form-row">
+          <div class="res-form-group">
+            <label for="res-name"><i class="fa-solid fa-user"></i> Full Name</label>
+            <input type="text" id="res-name" name="name" placeholder="Your full name" required />
+          </div>
+          <div class="res-form-group">
+            <label for="res-phone"><i class="fa-solid fa-phone"></i> Phone Number</label>
+            <input type="tel" id="res-phone" name="phone" placeholder="09XX XXX XXXX" required />
+          </div>
+        </div>
+        <div class="res-form-row">
+          <div class="res-form-group">
+            <label for="res-date"><i class="fa-solid fa-calendar"></i> Date</label>
+            <input type="date" id="res-date" name="date" required />
+          </div>
+          <div class="res-form-group">
+            <label for="res-time"><i class="fa-solid fa-clock"></i> Time</label>
+            <select id="res-time" name="time" required>
+              <option value="" disabled selected>Select a time</option>
+              <option>11:30 AM</option><option>12:00 PM</option><option>12:30 PM</option>
+              <option>1:00 PM</option><option>1:30 PM</option><option>2:00 PM</option>
+              <option>5:00 PM</option><option>5:30 PM</option><option>6:00 PM</option>
+              <option>6:30 PM</option><option>7:00 PM</option><option>7:30 PM</option>
+              <option>8:00 PM</option><option>8:30 PM</option><option>9:00 PM</option>
+            </select>
+          </div>
+        </div>
+        <div class="res-form-row">
+          <div class="res-form-group">
+            <label for="res-guests"><i class="fa-solid fa-users"></i> Party Size</label>
+            <select id="res-guests" name="guests" required>
+              <option value="" disabled selected>Number of guests</option>
+              <option>1 guest</option><option>2 guests</option><option>3 guests</option>
+              <option>4 guests</option><option>5 guests</option><option>6 guests</option>
+              <option>7–10 guests</option><option>10+ guests (private dining)</option>
+            </select>
+          </div>
+          <div class="res-form-group">
+            <label for="res-occasion"><i class="fa-solid fa-champagne-glasses"></i> Occasion <small>(optional)</small></label>
+            <select id="res-occasion" name="occasion">
+              <option value="" selected>None / Regular dining</option>
+              <option>Birthday</option><option>Anniversary</option><option>Business meal</option>
+              <option>Date night</option><option>Family gathering</option><option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="res-form-group">
+          <label for="res-notes"><i class="fa-solid fa-pen"></i> Special Requests <small>(optional)</small></label>
+          <textarea id="res-notes" name="notes" rows="3" placeholder="Allergies, seating preference, special setup…"></textarea>
+        </div>
+        <div class="res-form-actions">
+          <button type="submit" class="btn btn-primary btn-lg" style="flex:1;justify-content:center;">
+            <i class="fa-solid fa-calendar-check"></i> Confirm Reservation
+          </button>
+          <a id="res-whatsapp-link" href="#" target="_blank" rel="noopener" class="btn btn-outline btn-lg whatsapp-btn" style="flex:1;justify-content:center;">
+            <i class="fa-brands fa-whatsapp"></i> Send via WhatsApp
+          </a>
+        </div>
+      </form>
+      <div class="res-success" id="res-success" style="display:none;">
+        <div class="res-success-icon"><i class="fa-solid fa-circle-check"></i></div>
+        <h3>Reservation Request Sent!</h3>
+        <p>Thank you! We’ll confirm your table shortly. See you at Sample Restaurant.</p>
+        <button class="btn btn-primary" onclick="closeResModal()">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ FLOATING BUTTONS ═══════════════════ -->
+  <a href="https://wa.me/639299666175?text=Hi%20Sample%20Restaurant!%20I%27d%20like%20to%20make%20a%20reservation." target="_blank" rel="noopener" class="float-btn float-whatsapp" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="float-tooltip">Chat on WhatsApp</span>
+  </a>
+  <button class="float-btn float-top" id="scroll-top" aria-label="Scroll to top">
+    <i class="fa-solid fa-arrow-up"></i>
+    <span class="float-tooltip">Back to Top</span>
+  </button>
+
+  <!-- ═══════════════════ MENU ITEM MODAL ═══════════════════ -->
+  <div id="item-modal" class="item-modal" role="dialog" aria-modal="true" aria-labelledby="item-modal-name">
+    <div class="item-modal-backdrop" id="item-modal-backdrop"></div>
+    <div class="item-modal-panel">
+      <button class="item-modal-close" id="item-modal-close" aria-label="Close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <!-- Image zone -->
+      <div class="item-modal-img-zone" id="item-modal-img-zone">
+        <img src="" alt="" id="item-modal-img" />
+        <div class="item-modal-img-grad"></div>
+      </div>
+      <!-- No-image icon zone -->
+      <div class="item-modal-icon-zone" id="item-modal-icon-zone">
+        <i class="fa-solid fa-utensils item-modal-icon-bg" id="item-modal-icon"></i>
+      </div>
+      <!-- Body -->
+      <div class="item-modal-body">
+        <div class="item-modal-badge-wrap" id="item-modal-badge-wrap"></div>
+        <h2 class="item-modal-name" id="item-modal-name"></h2>
+        <div class="item-modal-price-row">
+          <span class="item-modal-price" id="item-modal-price"></span>
+          <span class="item-modal-price-note">per serving</span>
+        </div>
+        <div class="item-modal-rule"><span>&#10022;</span></div>
+        <p class="item-modal-desc" id="item-modal-desc"></p>
+        <div class="item-modal-footer">
+          <a href="tel:+639299666175" class="btn btn-primary">
+            <i class="fa-solid fa-phone"></i> Reserve a Table
+          </a>
+          <button class="btn btn-outline" id="item-modal-back">
+            <i class="fa-solid fa-arrow-left"></i> Back
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
